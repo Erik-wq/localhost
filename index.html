@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>CRUD demo js</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="menu-global">
+        <div class="menu-container">
+            <div class="menu-logo">
+                <a href="index.html">
+                    <img src="imagen.png" alt="Logo">
+                </a>
+            </div>
+            
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <div class="menu-items">
+                <a href=" " class="menu-item home-button">INICIO</a>
+               <a href="https://erik-wq.github.io/crear-web-desde-cero/" class="menu-item">PAGINA 1</a>
+                <a href="https://erik-wq.github.io/pagina-html/" class="menu-item">PAGINA 2</a>
+                <a href="https://erik-wq.github.io/bootstrap/" class="menu-item">PAGINA 3</a>
+                <a href="https://erik-wq.github.io/bootstrap/" class="menu-item">PAGINA 4</a>
+                <a href="https://erik-wq.github.io/bootstrap/" class="menu-item">LOCALHOST</a>
+                <a href="https://erik-wq.github.io/bootstrap/" class="menu-item">CURRICULUM</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+
+</body>
+<body class="container">
+    <div class="mensaje-alerta"></div>
+
+    <div class="jumbotron row">
+        <h2> Finca Erik <small>Gestión de vacas</small></h2>
+
+        <div class="col-md-6">
+            <hr>
+            <p class="modo"> <span class="glyphicon glyphicon-plus"></span> Agregar vaca</p>
+            <form id="vacas-form">
+                <input class="form-control" type="text" id="nombre" placeholder="Nombre" required>
+                <input class="form-control" type="email" id="correo" placeholder="Correo de la vaca" required>
+                <input class="form-control" type="number" id="peso" placeholder="Peso en kg" required>
+                <input class="form-control" type="date" id="fecha_nacimiento" placeholder="Fecha de nacimiento" required>
+                <input class="form-control" type="text" id="Raza" placeholder="Raza de la vaca" required> <!-- Raza de vaca -->
+                <input class="form-control" type="text" id="Tamaño" placeholder="Tamaño de la vaca" required> <!-- Tamaño de vaca -->
+
+                <br>
+                <input type="submit" class="btn btn-success" value=" Guardar"></br>
+		<br>
+		<input class="form-control" type="text" id="buscar" placeholder="Buscar vaca por nombre" onkeyup="BuscarVaca()"></br>
+            </form>
+            <br>
+            <br>
+            <div id="numeroVacas"></div>
+        </div>
+
+        <div class="col-md-6">
+            <img style="width:100%" src="vaca.jpg" alt="Imagen de vaca" />
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <table class="table" id="dbVacas-list"></table>
+
+    <script type="text/javascript" src="funciones.js"></script>
+</body>
+</html>
